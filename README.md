@@ -9,7 +9,7 @@ The `SOURCE` contain creation and re-initialization methods.
 The `POOLED` contains methods for querrying activity, de/activating instance, Getting Unique ID ,and destroying itself.
 
 ## SOURCE
-The `SOURCE` Implements the interface `IPooled<T>` where `T:IPooled` which by default contains 4 methods.
+The `SOURCE` Implements the interface `IPooled<T>` where `T:IPooled` which by default contains 4 methods. The reason why I decided to put these methods directly on the `SOURCE` rather than into the `IPoolManager` is because the `SOURCE` may be used with ***ANY*** implementation of a `PoolManager`. No need to re-implement these basic methods over and over. Unfortunately it may reduce readability but increases portability 
 
 - `T[] GetFullPool(int length)`
 - `void FillExistingPool(ref T[] pool)`
