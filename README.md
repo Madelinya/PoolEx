@@ -2,7 +2,7 @@
 > My utility classes for object pooling in unity. cutom object pool implementation to suit my needs better.
 > 
 ## Overview
-This implementation supposes that there are two objects when it comes to object pooling. The `SOURCE` and the `POOLED`. The `SOURCE` contains all pre-requisites for creating the `POOLED` structures. The pool object itsel, that manages the pool in various ways, be it based on a stack or queue or anything else implements the interface ` IPoolManager<POOLED_TYPE, SOURCE_TYPE>` where `SOURCE_TYPE : IPoolable<POOLED_TYPE>` where `POOLED_TYPE:IPooled` or an interface that inherits from this one. It is done this way so that the implementations that concern each obejct are within the implementation of each object. 
+This implementation supposes that there are two objects when it comes to object pooling. The `SOURCE` and the `POOLED`. The `SOURCE` contains all pre-requisites for creating the `POOLED` structures. The pool object itsel, that manages the pool in various ways, be it based on a stack or queue or anything else implements the interface ` IPoolManager<POOLED_TYPE, SOURCE_TYPE>` where `SOURCE_TYPE : IPoolable<POOLED_TYPE>` where `POOLED_TYPE:IPooled` or an interface that inherits from this one. It is done this way so that the implementations that concern each obejct are within the implementation of each object. It is also intended to potentially handle any custom obejct, not only `GameObject` objects
 
 The `SOURCE` contain creation and re-initialization methods. 
 
